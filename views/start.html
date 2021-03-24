@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <title>爱晒太阳的懒猫。。 - 博客园</title>
+    <link id="MainCss" rel="stylesheet" href="/static/css/custom.css" />
+    <link type="text/css" rel="stylesheet" href="/static/css/start_index.css" />
+
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=V0BbkkQE24zt1D_4TRGfRwcCB1E3YoBpH5YOp1qKoxA"></script>  
+</head>
+
+<body class="no-navbar" style="background: url(/static/images/body_bg.jpg);background-size: cover;">
+    <a name="top"></a>   
+    <!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+		
+    <!--done-->
+    <h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/cat-cat/">
+    爱晒太阳的懒猫。。</a>
+    </h1>
+    <h2></h2>
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+
+
+
+    <div id="navigator">
+            <ul id="navList">
+            <li><a id="blog_nav_sitehome" class="menu" href="/">
+            博客园</a>
+            </li>
+            <li>
+            <a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+            新随笔</a>
+            </li>
+            <li>
+            <a id="blog_nav_admin" class="menu" href="./login.tpl">
+            管理</a>
+            </li>
+            </ul>
+            <div class="blogStats">
+            <span id="stats_post_count">随笔 - 12&nbsp; </span>
+            <span id="stats_article_count">文章 - 0&nbsp; </span>
+            <span id="stats-comment_count">评论 - 0</span>
+            </div><!--end: blogStats -->
+    </div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+            <div class="forFlow">
+        {{ range .article }}
+                <div class="day">
+                    <div class="dayTitle">
+                        <a href="https://www.cnblogs.com/cat-cat/archive/2019/12/16.html">2019年12月16日</a>
+                    </div>
+
+                    <div class="postTitle">
+                        <a class="postTitle2 vertical-middle"  href="./read.html?id={{.Id}}">
+                            <span>
+                                {{.Title}}
+                            </span>
+                        </a>
+                    </div>
+                    <div class="postCon">
+                        <div class="c_b_p_desc">
+                        {{.Content}}        
+                        <a href="./read.html?id={{.Id}}" class="c_b_p_desc_readmore">阅读全文</a>
+                        </div>
+                    </div>
+                        <div class="clear"></div>
+                    <div class="postDesc">posted @ {{ .CreateAt.Format "2006-01-02 15:04:05" }}
+                        爱晒太阳的懒猫。。
+                        <span data-post-id="12047709" class="post-view-count">阅读(173)</span> 
+                        <span data-post-id="12047709" class="post-comment-count">评论(0)</span> 
+                        <span data-post-id="12047709" class="post-digg-count">推荐(0)</span> 
+                        <a href="https://i.cnblogs.com/EditPosts.aspx?postid=12047709" rel="nofollow">
+                            编辑
+                        </a>
+                    </div>
+                        <div class="clear"></div>
+                </div>
+
+        {{ end }}
+        <div class="topicListFooter">
+            <div id="nav_next_page">
+                
+            <a href="https://www.cnblogs.com/cat-cat/default.html?page=2">
+                下一页
+            </a>
+
+            </div>    
+        </div>
+	</div><!--end: forFlow -->
+    </div><!--end: mainContent 主体内容容器-->
+    
+
+	<div class="clear"></div>
+	</div><!--end: main -->
+    <div class="clear"></div>
+    
+	<div id="footer"><!--done--> 
+        Copyright &copy; 2021 爱晒太阳的懒猫。。
+        <br /><span id="poweredby">Powered by .NET 5.0 on Kubernetes</span>
+    </div><!--end: footer -->
+    
+</div><!--end: home 自定义的最大容器 -->
+   
+</body>
+</html>
